@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C55BC7CA-706D-4538-9658-AD51BEF8C723}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectEulerSharp</RootNamespace>
+    <AssemblyName>ProjectEulerSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.0.9122, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01-50\Euler30.cs" />
+    <Compile Include="01-50\Euler27.cs" />
+    <Compile Include="01-50\Euler43.cs" />
+    <Compile Include="01-50\Euler40.cs" />
+    <Compile Include="01-50\Euler25.cs" />
+    <Compile Include="01-50\Euler28.cs" />
+    <Compile Include="51-100\Euler52.cs" />
+    <Compile Include="Library\BigInt.cs" />
+    <Compile Include="Library\MatrixExtensions.cs" />
+    <Compile Include="Library\SpecialCollections.cs" />
+    <Compile Include="Library\DateTimeExtensions.cs" />
+    <Compile Include="Library\EulerProblem.cs" />
+    <Compile Include="Library\NumberExtensions.cs" />
+    <Compile Include="Library\Primes.cs" />
+    <Compile Include="Library\MetadataAttribute.cs" />
+    <Compile Include="Library\SequenceExtensions.cs" />
+    <Compile Include="Library\StringExtensions.cs" />
+    <Compile Include="01-50\Euler34.cs" />
+    <Compile Include="01-50\Euler35.cs" />
+    <Compile Include="01-50\Euler36.cs" />
+    <Compile Include="01-50\Euler22.cs" />
+    <Compile Include="01-50\Euler21.cs" />
+    <Compile Include="01-50\Euler20.cs" />
+    <Compile Include="01-50\Euler19.cs" />
+    <Compile Include="01-50\Euler37.cs" />
+    <Compile Include="01-50\Euler39.cs" />
+    <Compile Include="01-50\Euler42.cs" />
+    <Compile Include="01-50\Euler44.cs" />
+    <Compile Include="01-50\Euler45.cs" />
+    <Compile Include="01-50\Euler46.cs" />
+    <Compile Include="01-50\Euler47.cs" />
+    <Compile Include="01-50\Euler17.cs" />
+    <Compile Include="01-50\Euler16.cs" />
+    <Compile Include="Library\Triplet.cs" />
+    <Compile Include="Library\ConsoleExtensions.cs" />
+    <Compile Include="01-50\Euler11.cs" />
+    <Compile Include="01-50\Euler14.cs" />
+    <Compile Include="01-50\Euler13.cs" />
+    <Compile Include="01-50\Euler12.cs" />
+    <Compile Include="01-50\Euler10.cs" />
+    <Compile Include="01-50\Euler09.cs" />
+    <Compile Include="01-50\Euler08.cs" />
+    <Compile Include="01-50\Euler07.cs" />
+    <Compile Include="01-50\Euler06.cs" />
+    <Compile Include="01-50\Euler05.cs" />
+    <Compile Include="01-50\Euler04.cs" />
+    <Compile Include="01-50\Euler03.cs" />
+    <Compile Include="01-50\Euler02.cs" />
+    <Compile Include="01-50\Euler01.cs" />
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThirdParty\MoreLinq\MaxBy.cs" />
+    <Compile Include="UnitTests\BigIntTests.cs" />
+    <Compile Include="UnitTests\PrimesTests.cs" />
+    <Compile Include="UnitTests\NumberExtensionsTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TextFiles\Euler11.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\Euler08.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\Euler13.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\Euler22.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TextFiles\Euler42.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\MoreLinq\COPYING.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

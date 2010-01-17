@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build;RunUnitTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Paths -->
+  <PropertyGroup>
+    <Root>$(MSBuildProjectDirectory)\..</Root>
+    <Build>$(Root)\build</Build>
+    <Src>$(Root)\src</Src>
+    <OutputDir>$(Build)\build.output</OutputDir>
+    <Lib>$(Root)\lib</Lib>
+  </PropertyGroup>
+
+  <!-- Configuration -->
+  <PropertyGroup>
+    <Configuration>RELEASE</Configuration>
+  </PropertyGroup>
+
+
+
+  <Target Name="Build">
+
+    <RemoveDir Directories="$(OutputDir)"></RemoveDir>
+    <MakeDir Directories="$(OutputDir)"></MakeDir>
+
+    <MSBuild Projects="$(Src)\ProjectEulerSharp\ProjectEulerSharp.csproj"
+             Targets="Rebuild"
+             Properties="OutputPath=$(OutputDir);Configuration=$(Configuration);"></MSBuild>
+
+  </Target>
+
+
+
+  <Target Name="RunUnitTests" DependsOnTargets="Build">
+
+    <Exec Command="$(Lib)\nunit-console.exe $(OutputDir)\ProjectEulerSharp.exe /nologo"
+          WorkingDirectory="$(OutputDir)"></Exec>
+
+  </Target>
+
+
+
+</Project>
