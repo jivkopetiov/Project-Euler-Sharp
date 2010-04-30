@@ -32,7 +32,7 @@
 
   <Target Name="RunUnitTests" DependsOnTargets="Build">
 
-    <Exec Command="$(Lib)\nunit-console.exe $(OutputDir)\ProjectEulerSharp.exe /nologo"
+    <Exec Command="&quot;$(Lib)\nunit-console.exe&quot; &quot;$(OutputDir)\ProjectEulerSharp.exe&quot; /nologo"
           WorkingDirectory="$(OutputDir)"></Exec>
 
   </Target>
