@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ProjectEulerSharp
 {
@@ -24,7 +22,28 @@ namespace ProjectEulerSharp
             return sum;
         }
 
-        public static int[,] GenerateSpiralMatrix(int rank)
+        public static List<int> GetDiagonalNumbers(this int[,] matrix)
+        {
+            int rank = matrix.GetLength(0);
+
+            var diagonalNumbers = new List<int>();
+            for (int i = 0; i < rank; i++)
+            {
+                diagonalNumbers.Add(matrix[i, i]);
+            }
+
+            for (int i = 0; i < rank; i++)
+            {
+                if (i != rank - i - 1)
+                {
+                    diagonalNumbers.Add(matrix[i, rank - i - 1]);
+                }
+            }
+
+            return diagonalNumbers;
+        }
+
+        public static int[,] GenerateClockwiseSpiralMatrix(int rank)
         {
             int[,] spiral = new int[rank, rank];
 
@@ -72,7 +91,71 @@ namespace ProjectEulerSharp
 
                 currentRank++;
             }
+
             return spiral;
+        }
+
+        public static int[,] GenerateAntiClockwiseSpiralMatrix(int rank)
+        {
+            int[,] spiral = new int[rank, rank];
+
+            int i = rank / 2;
+            int j = rank / 2;
+            spiral[i, j] = 1;
+            int counter = 1;
+            int currentRank = 1;
+
+            while (currentRank <= rank)
+            {
+                // move right
+                for (int repetitions = 1; repetitions <= currentRank; repetitions++)
+                {
+                    i++;
+                    if (i >= rank) return spiral;
+                    spiral[i, j] = ++counter;
+                }
+
+                // move up
+                for (int repetitions = 1; repetitions <= currentRank; repetitions++)
+                {
+                    j--;
+                    if (j < 0) return spiral;
+                    spiral[i, j] = ++counter;
+                }
+                currentRank++;
+
+                // move left
+                for (int repetitions = 1; repetitions <= currentRank; repetitions++)
+                {
+                    i--;
+                    if (i < 0) return spiral;
+                    spiral[i, j] = ++counter;
+                }
+
+                // move down
+                for (int repetitions = 1; repetitions <= currentRank; repetitions++)
+                {
+                    j++;
+                    if (j >= rank) return spiral;
+                    spiral[i, j] = ++counter;
+                }
+
+                currentRank++;
+            }
+
+            return spiral;
+        }
+
+        public static void Print(this int[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write("{0,4}", matrix[j, i]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

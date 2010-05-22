@@ -10,7 +10,7 @@ namespace ProjectEulerSharp
         [Test]
         public override void Solve()
         {
-            var sum = MatrixExtensions.GenerateSpiralMatrix(1001)
+            var sum = MatrixExtensions.GenerateClockwiseSpiralMatrix(1001)
                                       .SumOfDiagonals();
 
             Verify(sum);
