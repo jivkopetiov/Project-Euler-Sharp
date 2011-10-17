@@ -143,6 +143,8 @@
     <Content Include="TextFiles\Euler42.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="TextFiles\Euler54.txt" />
+    <Content Include="TextFiles\Euler59.txt" />
     <Content Include="ThirdParty\MoreLinq\COPYING.txt" />
   </ItemGroup>
   <ItemGroup>
