@@ -12,7 +12,7 @@ namespace ProjectEulerSharp
         {
             try
             {
-                int currentProblem = 14;
+                int currentProblem = 93;
 
                 if (args != null && args.Length > 0)
                 {
