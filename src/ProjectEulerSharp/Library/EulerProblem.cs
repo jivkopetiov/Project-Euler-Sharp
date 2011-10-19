@@ -1,11 +1,27 @@
 ﻿using System;
 using System.Linq;
 using NUnit.Framework;
+using System.Diagnostics;
 
 namespace ProjectEulerSharp
 {
     public abstract class EulerProblem
     {
+        private Stopwatch _stopwatch;
+        protected long result;
+
+        [SetUp]
+        public void Initialize()
+        {
+            //_stopwatch = Stopwatch.StartNew();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            //Console.Write(" - " + _stopwatch.ElapsedMilliseconds);
+        }
+
         protected virtual void Verify(long actual)
         {
             Type eulerType = this.GetType();
