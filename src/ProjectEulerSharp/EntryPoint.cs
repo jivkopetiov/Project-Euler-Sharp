@@ -12,7 +12,7 @@ namespace ProjectEulerSharp
         {
             try
             {
-                int currentProblem = 92;
+                int currentProblem = 93;
 
                 if (args != null && args.Length > 0)
                 {
@@ -20,6 +20,7 @@ namespace ProjectEulerSharp
                 }
 
                 var problem = EulerProblem.Create(currentProblem);
+                problem.Initialize();
                 problem.Solve();
             }
             catch (Exception ex)

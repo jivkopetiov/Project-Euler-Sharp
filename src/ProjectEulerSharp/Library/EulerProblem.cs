@@ -8,18 +8,12 @@ namespace ProjectEulerSharp
     public abstract class EulerProblem
     {
         private Stopwatch _stopwatch;
-        protected long result;
+        protected long _result;
 
         [SetUp]
         public void Initialize()
         {
-            //_stopwatch = Stopwatch.StartNew();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            //Console.Write(" - " + _stopwatch.ElapsedMilliseconds);
+            _stopwatch = Stopwatch.StartNew();
         }
 
         protected virtual void Verify(long actual)
@@ -32,7 +26,7 @@ namespace ProjectEulerSharp
                 (MetadataAttribute[])eulerType.GetCustomAttributes(typeof(MetadataAttribute), true);
             var metadata = attributes.First();
 
-            Console.WriteLine(eulerName + " :: " + actual);
+            Console.WriteLine(eulerName + " :: " + actual + " :: (" + _stopwatch.ElapsedMilliseconds + " milli)");
 
             Assert.AreEqual(metadata.Result, actual);
         }

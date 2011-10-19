@@ -30,17 +30,13 @@ namespace ProjectEulerSharp
                     topMax = setMax;
                     topSet = set;
                 }
-
             }
 
-            Console.Write(topMax + " - ");
             string result = "";
             foreach (int i in topSet)
                 result += i.ToString();
 
-            int intResult = int.Parse(result);
-
-            Verify(intResult);
+            Verify(long.Parse(result));
         }
 
         private int GetResultsForSet(IList<int> set)
